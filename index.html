@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>title</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="logo">
+        <img src="splash_page/logo.png">
+      </div>
+      <div id="hero">
+        <img src="splash_page/hero_image.jpg">
+      </div>
+      <div id="header">
+        <img src="splash_page/header_graphic.png">
+      </div>
+      <div id="studentform">
+          <form>
+              <h2>Interested Student?</h2>
+              <label for="name">
+                <input name="name" type="text"  id="name" placeholder="Name"></input>
+              </label>
+              <label for="school">
+                <input name="school" type="text" id="school" placeholder="School"></input>
+              </label>
+              <label for="email">
+                <input name="email" type="text" id="email" placeholder="Email Address"></input>
+              </label>
+              <input type="submit" value="Interested Student" id="submit"/>
+              <h4>Interested Company?</h4>
+            </form>
+      </div>
+      <div id="companies">
+        <div>
+          <p>Companies using Piazza Careers</p>
+        </div>
+        <img src="splash_page/logos.png">
+      </div>
+      
+      <div class = "val" id="value1">
+        <h2>Brand Awareness</h2>
+        <img src="splash_page/icon1.png">
+        <p>Enable student relate to your brand and your mission. Getting students familiar with your brand early on helps with forming positive brand associations.</p>
+      </div>
+      <div class = "val" id="value2">
+          <h2>Relatability</h2>
+          <img src="splash_page/icon2.png">
+          <p>The best asset your company has in being able to relate to students is your current employees career experiences. We help you leverege these in a powerful way.</p>
+      </div>
+      <div class = "val" id="value3">
+          <h2>Event RSVP</h2>
+          <img src="splash_page/icon3.png">
+          <p>Are students aware of your on campus events? We target your messaging by school and class type to ensure the students you care about are in the know.</p>
+      </div>
+      <div class = "val" id="value4">
+          <h2>Interview Request</h2>
+          <img src="splash_page/icon4.png">
+          <p>We give students the opportunity to connect directly with you to request more information, to ask questions, and ultimately apply for a job. We keep things organized and simple.</p>
+      </div>
+        <div class="def" id="def1">
+          <div>
+            <img src="splash_page/iconbig1.png">
+          </div>
+          <div>
+            <h2>Brand Awareness</h2>
+            <p>
+                Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Massa tempor nec feugiat nisl pretium fusce id velit ut. Lacus laoreet non curabitur gravida arcu. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Duis convallis convallis tellus id interdum velit laoreet id donec.
+            </p>
+          </div>  
+        </div>
+        <div class="def" id="def2">
+          <div>
+            <img src="splash_page/iconbig2.png">
+          </div>
+          <div>
+            <h2>Relatability</h2>
+            <p>
+              Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Massa tempor nec feugiat nisl pretium fusce id velit ut. Lacus laoreet non curabitur gravida arcu. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Duis convallis convallis tellus id interdum velit laoreet id donec.
+            </p>
+          </div>
+        </div>
+        <div class="def" id="def3">
+          <div>
+            <img src="splash_page/iconbig3.png">
+          </div>
+          <div>
+            <h2>Event RSVP</h2>
+            <p>
+              Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Massa tempor nec feugiat nisl pretium fusce id velit ut. Lacus laoreet non curabitur gravida arcu. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Duis convallis convallis tellus id interdum velit laoreet id donec.
+            </p>
+          </div>
+        </div>
+        <div class="def" id="def4">
+          <div>
+            <img src="splash_page/iconbig4.png">
+          </div>
+          <div>
+            <h2>Interview Request</h2>
+            <p>
+              Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Massa tempor nec feugiat nisl pretium fusce id velit ut. Lacus laoreet non curabitur gravida arcu. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Duis convallis convallis tellus id interdum velit laoreet id donec.
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showDefinition(event){
+        let defs = document.querySelectorAll(".def");
+        defs.forEach(def => def.classList.remove("selected"));
+      
+        if (event.target.className === "val") {
+          let id = event.target.id[5];
+          let def = document.querySelector(`.def[id="def${id}"]`);
+          def.classList.add("selected");
+        }
+      }
+
+      window.addEventListener('click', showDefinition);
+    
+    </script>
+  
+  </body>
+</html>
